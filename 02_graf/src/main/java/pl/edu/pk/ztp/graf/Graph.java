@@ -75,7 +75,11 @@ public class Graph {
     }
 
     public int getNumberOfEdges() {
-        return getEdges().size();
+        int sum = 0;
+        for (ArrayList<Integer> edge : edges) {
+            sum += edge.size();
+        }
+        return sum;
     }
 
     public List<Edge> getEdgesWithHeadAt(int v) {
